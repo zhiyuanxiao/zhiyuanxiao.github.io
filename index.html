@@ -118,6 +118,7 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <!-- SYNLOCO -->
   <tr>
     <td width="40%" valign="top" align="center"><a href="https://synloco.github.io">
     <video playsinline autoplay loop muted src="images/synloco-clip.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
@@ -126,7 +127,7 @@
       <p><a href="https://synloco.github.io" id="SYNLOCO">
       <heading>SYNLOCO: Synthesizing Central Pattern Generator and Reinforcement Learning for Quadruped Locomotion</heading></a><br>
       Xinyu Zhang*, Zhiyuan Xiao*, Qingrui Zhang, Wei Pan<br>
-      arXiv 2023 | submited to ICRA 2024 (under review)<br>
+      arXiv 2023 | submited to CDC 2024<br>
       </p>
 
       <div class="paper" id="synloco">
@@ -156,6 +157,35 @@
         eprint = {2310.06606 [cs]},
         keywords = {Computer Science - Robotics}
   }
+</pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- PALOCO -->
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://paloco.github.io">
+    <video playsinline autoplay loop muted src="images/paloco-clip.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://paloco.github.io" id="PALOCO">
+      <heading>PA-LOCO: Learning Perturbation-Adaptive Locomotion for Quadruped Robots</heading></a><br>
+      Zhiyuan Xiao, Xinyu Zhang, Xiang Zhou, Qingrui Zhang<br>
+      arXiv 2024 | submited to IROS 2024<br>
+      </p>
+
+      <div class="paper" id="paloco">
+      <a href="https://paloco.github.io">webpage</a> |
+      <a href="https://paloco.github.io/resources/PALOCO.pdf">pdf</a> |
+      <a href="javascript:toggleblock('paloco_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('paloco')" class="togglebib">bibtex</a> |
+      <a href="">arXiv</a> |
+      <a href="">code</a> |
+      <a href="">video</a>
+
+      <p align="justify"> <i id="paloco_abs">Numerous locomotion controllers have been designed based on Reinforcement Learning (RL) to facilitate blind quadrupedal locomotion traversing challenging terrains.  Nevertheless, locomotion control is still a challenging task for quadruped robots traversing diverse terrains amidst unforeseen disturbances. Recently, privileged learning has been employed to learn reliable and robust quadrupedal locomotion over various terrains based on a teacher-student architecture. However, its one-encoder structure is not adequate in addressing external force perturbations. The student policy would experience inevitable performance degradation due to the feature embedding discrepancy between the feature encoder of the teacher policy and the one of the student policy. Hence, this paper presents a privileged learning framework with multiple feature encoders and a residual policy network for robust and reliable quadruped locomotion subject to various external perturbations. The multi-encoder structure can decouple latent features from different privileged information, ultimately leading to enhanced performance of the learned policy in terms of robustness, stability, and reliability. The efficiency of the proposed feature encoding module is analyzed in depth using extensive simulation data. The introduction of the residual policy network helps mitigate the performance degradation experienced by the student policy that attempts to clone the behaviors of a teacher policy. The proposed framework is evaluated on a Unitree GO1 robot, showcasing its performance enhancement over the state-of-the-art privileged learning algorithm through extensive experiments conducted on diverse terrains. Ablation studies are conducted to illustrate the efficiency of the residual policy network.</i></p>
+
+<pre xml:space="preserve">
 </pre>
       </div>
     </td>
@@ -197,47 +227,6 @@
       </div>
     </td>
   </tr> -->
-
-
-
-  <!--<tr>
-    <td width="40%" valign="top" align="center"><a href="https://navigation-locomotion.github.io/">
-    <video playsinline autoplay loop muted src="images/nav-clip.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://navigation-locomotion.github.io/" id="NAVLOCO">
-      <heading>Coupling Vision and Proprioception for</br>Navigation of Legged Robots</heading></a><br>
-      Zipeng Fu*, Ashish Kumar*, Ananye Agarwal, Haozhi Qi,<br>Jitendra Malik, Deepak Pathak<br>
-      CVPR 2022<br>
-      <b>Best Paper at Multimodal Learning Workshop</b>
-      </p>
-
-      <div class="paper" id="navloco">
-      <a href="https://navigation-locomotion.github.io/">webpage</a> |
-      <a href="https://arxiv.org/pdf/2112.02094.pdf">pdf</a> |
-      <a href="javascript:toggleblock('navloco_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('navloco')" class="togglebib">bibtex</a> |
-      <a href="https://arxiv.org/abs/2112.02094">arXiv</a> |
-      <a href="https://github.com/MarkFzp/navigation-locomotion">code</a> |
-      <a href="https://www.youtube.com/watch?v=sZVvutQUAQ4">video</a>
-
-      <p align="justify"> <i id="navloco_abs">We exploit the complementary strengths of vision and proprioception to develop a point-goal navigation system for legged robots, called VP-Nav. Legged systems are capable of traversing more complex terrain than wheeled robots, but to fully utilize this capability, we need a high-level path planner in the navigation system to be aware of the walking capabilities of the low-level locomotion policy in varying environments. We achieve this by using proprioceptive feedback to ensure the safety of the planned path by sensing unexpected obstacles like glass walls, terrain properties like slipperiness or softness of the ground and robot properties like extra payload that are likely missed by vision. The navigation system uses onboard cameras to generate an occupancy map and a corresponding cost map to reach the goal. A fast marching planner then generates a target path. A velocity command generator takes this as input to generate the desired velocity for the walking policy. A safety advisor module adds sensed unexpected obstacles to the occupancy map and environment-determined speed limits to the velocity command generator. We show superior performance compared to wheeled robot baselines, and ablation studies which have disjoint high-level planning and low-level control. We also show the real-world deployment of VP-Nav on a quadruped robot with onboard sensors and computation.</i></p>
-
-<pre xml:space="preserve">
-@inproceedings{fu2021coupling,
-  author = {Fu, Zipeng and Kumar, Ashish and 
-            Agarwal, Ananye and Qi, Haozhi and 
-            Malik, Jitendra and Pathak, Deepak},
-  title  = {Coupling Vision and Proprioception 
-            for Navigation of Legged Robots},
-  booktitle = {{CVPR}},
-  year   = {2022}
-}
-</pre>
-      </div>
-    </td>
-  </tr> -->
-
 
   <!-- <tr>
     <td width="40%" valign="top" align="center"><a href="https://energy-locomotion.github.io/">
@@ -349,95 +338,6 @@
     </td>
   </tr> -->
 
-  
-  <!--<tr>
-    <td width="40%" valign="top" align="center"><a href="https://arxiv.org/pdf/2001.07752.pdf"><img src="images/AAMAS2020_Pragmatics_img.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://arxiv.org/pdf/2001.07752.pdf" id="PRAGMATICS_MARL">
-      <heading>Emergence of Pragmatics from Referential Game between<br>Theory of Mind Agents</heading></a><br>
-      Luyao Yuan, Zipeng Fu, Jingyue Shen, Lu Xu, Junhong Shen,</br>Song-Chun Zhu<br>
-      Emergent Communication Workshop<br>
-      NeurIPS 2019</b>
-      </p>
-
-      <div class="paper" id="pragmatics_marl">
-      <a href="https://arxiv.org/pdf/2001.07752.pdf">pdf</a> |
-      <a href="javascript:toggleblock('pragmatics_marl_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('pragmatics_marl')" class="togglebib">bibtex</a> |
-      <a href="https://arxiv.org/pdf/2001.07752">arXiv</a> |
-      <a href="https://github.com/MarkFzp/ToM-Pragmatics">code</a>
-
-      <p align="justify"> <i id="pragmatics_marl_abs">Pragmatics studies how context can contribute to language meanings. In human communication, language is never interpreted out of context, and sentences can usually convey more information than their literal meanings. However, this mechanism is missing in most multi-agent systems, restricting the communication efficiency and the capability of human-agent interaction. In this paper, we propose an algorithm, using which agents can spontaneously learn the ability to “read between lines” without any explicit hand-designed rules. We integrate theory of mind (ToM) in a cooperative multi-agent pedagogical situation and propose an adaptive reinforcement learning (RL) algorithm to develop a communication protocol. ToM is a profound cognitive science concept, claiming that people regularly reason about other’s mental states, including beliefs, goals, and intentions, to obtain performance advantage in competition, cooperation or coalition. With this ability, agents consider language as not only messages but also rational acts reflecting others hidden states. Our experiments demonstrate the advantage of pragmatic protocols over non-pragmatic protocols. We also show the teaching complexity following the pragmatic protocol empirically approximates to recursive teaching dimension (RTD).</i></p>
-
-<pre xml:space="preserve">
-@article{yuan2019emergencepragmatics,
-  author = {Yuan, Luyao and Fu, Zipeng and Shen, Jingyue and Xu, Lu and Shen, Junhong and Zhu, Song-Chun},
-  journal= {Emergent Communication Workshop at NeurIPS},
-  year   = {2019}
-}
-</pre>
-      </div>
-    </td>
-  </tr>-->
-
-
-  <!--<tr>
-    <td width="40%" valign="top" align="center"><a href="data/AOG_MCTS.pdf"><img src="images/aog_mcts_img2.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="data/AOG_MCTS.pdf" id="AOG_MCTS">
-      <heading>Unsupervised Incremental Structure Learning of Stochastic And-Or Grammars with Monte Carlo Tree Search</heading></a><br>
-      Luyao Yuan, Jingyue Shen, Zipeng Fu, Song-Chun Zhu<br>
-      Preprint 2019</b>
-      </p>
-
-      <div class="paper" id="aog_mcts">
-      <a href="data/AOG_MCTS.pdf">pdf</a> |
-      <a href="javascript:toggleblock('aog_mcts_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('aog_mcts')" class="togglebib">bibtex</a> | 
-      <a href="https://github.com/MarkFzp/and-or-graph-lib">code (And-Or-Graph Learning Library)</a>
-
-      <p align="justify"><i id="aog_mcts_abs">Stochastic And-Or grammars form a compact representation of probabilistic contextfree grammars. They explicitly model compositionality and reconfigurability in a hierarchical manner and can be utilized to understand the underlying structures of different kinds of data (e.g., language, image, or video). In this paper, we proposed an unsupervised AndOr grammar learning approach that iteratively searches for better grammar structure and parameters to optimize the grammar compactness and data likelihood. To handle the complexity of grammar learning, we developed an algorithm based on the Monte Carlo Tree Search to effectively explore the search space. Also, our method enables incremental grammar learning. Experimental results show that our approach significantly outperforms previous greedy-search-based approaches, and our incremental learning results are comparable to previous batch learning results.</i></p>
-
-<pre xml:space="preserve">
-@article{yuan2019stochastic,
-  author = {Yuan, Luyao and Shen, Jingyue and Fu, Zipeng and Zhu, Song-Chun},
-  journal= {Preprint},
-  year   = {2019}
-}
-</pre>
-      </div>
-    </td>
-  </tr> -->
-
-
-
-  <!-- <tr>
-    <td width="40%" valign="top" align="center"><a href="data/JNCS2019_Review.pdf"><img src="images/JNSC2019_Review_img.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="data/JNCS2019_Review.pdf" id="MATERIAL_REVIEW">
-      <heading>Machine Learning for Glass Science and Engineering: A Review</heading></a><br>
-      Han Liu, Zipeng Fu, Kai Yang, Xinyi Xu, Mathieu Bauchy<br>
-      Journal of Non-Crystalline Solids 2019</b>
-      </p>
-
-      <div class="paper" id="material_review">
-      <a href="data/JNCS2019_Review.pdf">pdf</a> |
-      <a href="javascript:toggleblock('material_review_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('material_review')" class="togglebib">bibtex</a>
-
-      <p align="justify"><i id="material_review_abs">The design of new glasses is often plagued by poorly efficient Edisonian “trial-and-error” discovery approaches. As an alternative route, the Materials Genome Initiative has largely popularized new approaches relying on artificial intelligence and machine learning for accelerating the discovery and optimization of novel, advanced materials. Here, we review some recent progress in adopting machine learning to accelerate the design of new glasses with tailored properties.</i></p>
-
-<pre xml:space="preserve">
-@article{liu2019machine,
-  author = {Liu, Han and Fu, Zipeng and Yang, Kai and Xu, Xinyi and Bauchy, Mathieu},
-  journal= {Journal of Non-Crystalline Solids},
-  year   = {2019}
-}
-</pre>
-      </div>
-    </td>
-  </tr> -->
-
 
   <!-- <tr>
     <td width="40%" valign="top" align="center"><a href="data/ACM_TURC2019_Adversarial.pdf"><img src="images/ACM_TURC2019_Adversarial_img.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
@@ -466,33 +366,6 @@
     </td>
   </tr> -->
 
-  
-  <!-- <tr>
-    <td width="40%" valign="top" align="center"><a href="data/IEEE_IoT2019_Energy.pdf"><img src="images/IEEE_IoT2019_Energy_img.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></a></td>
-    <td width="60%" valign="top">
-      <p><a href="data/IEEE_IoT2019_Energy.pdf" id="IEEE_IoT">
-      <heading>Energy Theft Detection With Energy Privacy Preservation in the Smart Grid</heading></a><br>
-      Donghuan Yao, Mi Wen, Xiaohui Liang, Zipeng Fu, Kai Zhang, Baojia Yang<br>
-      IEEE IoT Journal 2019</b>
-      </p>
-
-      <div class="paper" id="ieee_iot">
-      <a href="data/IEEE_IoT2019_Energy.pdf">pdf</a> |
-      <a href="javascript:toggleblock('ieee_iot_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('ieee_iot')" class="togglebib">bibtex</a>
-
-      <p align="justify"><i id="ieee_iot_abs">As a prominent early instance of the Internet of Things in the smart grid, the advanced metering infrastructure (AMI) provides real-time information from smart meters to both grid operators and customers, exploiting the full potential of demand response. However, the newly collected information without security protection can be maliciously altered and result in huge loss. In this paper, we propose an energy theft detection scheme with energy privacy preservation in the smart grid. Especially, we use combined convolutional neural networks (CNNs) to detect abnormal behavior of the metering data from a long-period pattern observation. In addition, we employ Paillier algorithm to protect the energy privacy. In other words, the users’ energy data are securely protected in the transmission and the data disclosure is minimized. Our security analysis demonstrates that in our scheme data privacy and authentication are both achieved. Experimental results illustrate that our modified CNN model can effectively detect abnormal behaviors at an accuracy up to 92.67%.</i></p>
-
-<pre xml:space="preserve">
-@article{yao2019energy,
-  author = {Yao, Donghuan and Liang, Xiaohui and Fu, Zipeng and Zhang, Kai and Yang, Baojia},
-  journal= {IEEE Internet of Things Journal},
-  year   = {2019}
-}
-</pre>
-      </div>
-    </td>
-  </tr> -->
 
 </table>
 
@@ -611,6 +484,9 @@ hideallbibs();
 <!-- publications -->
 <script xml:space="preserve" language="JavaScript">
   hideblock('synloco_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('paloco_abs');
 </script>
 
 <!-- nostagia -->
