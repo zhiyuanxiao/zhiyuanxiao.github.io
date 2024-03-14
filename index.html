@@ -136,7 +136,7 @@
       <a href="javascript:toggleblock('synloco_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('synloco')" class="togglebib">bibtex</a> |
       <a href="https://arxiv.org/abs/2310.06606">arXiv</a> |
-      <a href="">code</a> |
+      <!-- <a href="">code</a> | -->
       <a href="https://youtu.be/MXDZlLdwS4k">video</a>
 
       <p align="justify"> <i id="synloco_abs">The Central Pattern Generator (CPG) is adept at generating rhythmic gait patterns characterized by consistent timing and adequate foot clearance. Yet, its open-loop configuration often compromises the system's control performance in response to environmental variations. On the other hand, Reinforcement Learning (RL), celebrated for its model-free properties, has gained significant traction in robotics due to its inherent adaptability and robustness. However, initiating traditional RL approaches from the ground up presents computational challenges and a heightened risk of converging to suboptimal local minima. In this paper, we propose an innovative quadruped locomotion framework, SYNLOCO, by synthesizing CPG and RL that can ingeniously integrate the strengths of both methods, enabling the development of a locomotion controller that is both stable and natural. Furthermore, we introduce a set of performance-driven reward metrics that augment the learning of locomotion control. To optimize the learning trajectory of SYNLOCO, a two-phased training strategy is presented. Our empirical evaluation, conducted on a Unitree GO1 robot under varied conditions -- including distinct velocities, terrains, and payload capacities -- showcases SYNLOCO's ability to produce consistent and clear-footed gaits across diverse scenarios. The developed controller exhibits resilience against substantial parameter variations, underscoring its potential for robust real-world applications.</i></p>
@@ -175,12 +175,12 @@
       </p>
 
       <div class="paper" id="paloco">
-      <a href="https://paloco.github.io">webpage</a> |
-      <a href="https://paloco.github.io/resources/PALOCO.pdf">pdf</a> |
+      <a href="https://learning-paloco.github.io">webpage</a> |
+      <a href="https://learning-paloco.github.io/resources/PALOCO.pdf">pdf</a> |
       <a href="javascript:toggleblock('paloco_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('paloco')" class="togglebib">bibtex</a> |
       <a href="">arXiv</a> |
-      <a href="">code</a> |
+      <!-- <a href="">code</a> | -->
       <a href="">video</a>
 
       <p align="justify"> <i id="paloco_abs">Numerous locomotion controllers have been designed based on Reinforcement Learning (RL) to facilitate blind quadrupedal locomotion traversing challenging terrains.  Nevertheless, locomotion control is still a challenging task for quadruped robots traversing diverse terrains amidst unforeseen disturbances. Recently, privileged learning has been employed to learn reliable and robust quadrupedal locomotion over various terrains based on a teacher-student architecture. However, its one-encoder structure is not adequate in addressing external force perturbations. The student policy would experience inevitable performance degradation due to the feature embedding discrepancy between the feature encoder of the teacher policy and the one of the student policy. Hence, this paper presents a privileged learning framework with multiple feature encoders and a residual policy network for robust and reliable quadruped locomotion subject to various external perturbations. The multi-encoder structure can decouple latent features from different privileged information, ultimately leading to enhanced performance of the learned policy in terms of robustness, stability, and reliability. The efficiency of the proposed feature encoding module is analyzed in depth using extensive simulation data. The introduction of the residual policy network helps mitigate the performance degradation experienced by the student policy that attempts to clone the behaviors of a teacher policy. The proposed framework is evaluated on a Unitree GO1 robot, showcasing its performance enhancement over the state-of-the-art privileged learning algorithm through extensive experiments conducted on diverse terrains. Ablation studies are conducted to illustrate the efficiency of the residual policy network.</i></p>
